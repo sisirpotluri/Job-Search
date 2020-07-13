@@ -21,14 +21,10 @@ public:
     void get_training_data() {
         
         csvstream train_file("job_skills.csv");
-        //csvstream train_file("small.csv");
         
         map<string, string> input;
  
         while (train_file >> input) {
-            
-            //get category and relevant skills
-            //it provides the best job for you and locations for that job
             
             string job_title;
             string location;
@@ -151,21 +147,6 @@ public:
         num_user_locations = static_cast<int>(user_location_sorted.size());
         num_user_skills = static_cast<int>(user_skills_sorted.size());
         
-        /*
-         cout << "cat" << endl;
-         for (auto it = user_category_sorted.begin(); it != user_category_sorted.end(); ++it) {
-             cout << *it << endl;
-         }
-         cout << "loc" << endl;
-         for (auto it = user_location_sorted.begin(); it != user_location_sorted.end(); ++it) {
-             cout << *it << endl;
-        }
-         cout << "skill" << endl;
-         for (auto it = user_skills_sorted.begin(); it != user_skills_sorted.end(); ++it) {
-            cout << *it << endl;
-         }
-        
-        */
     }
     
     double log_prior (const string & job_title) {
@@ -456,8 +437,5 @@ set<string> remove_duplicates(string & string_in) {
     
 }
 
-/* PLAN: Use job descriptions for amazon jobs and have the user enter a job position
- they're interested in, then have them list a few skills they have, it will give them a grade for how
- competitive they are for the position */
 
 #endif
