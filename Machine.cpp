@@ -378,10 +378,6 @@ public:
     
 private:
     
-    map<pair<string, string>, int> title_skills_count;
-    map<pair<string, string>, int> title_category_count;
-    map<pair<string, string>, int> title_location_count;
-    
     map<string, int> keywords_count;
     map<string, int> titles_count;
     map<string, int> category_count;
@@ -391,6 +387,10 @@ private:
     set<string> all_titles;
     set<string> all_categories;
     set<string> all_locations;
+    
+    map<pair<string, string>, int> title_skills_count;
+    map<pair<string, string>, int> title_category_count;
+    map<pair<string, string>, int> title_location_count;
     
     int num_jobs = 0;
     int num_keywords = 0;
